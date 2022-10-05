@@ -2,17 +2,28 @@ import styles from './header.module.css';
 import MyContext from '../../context';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { selectMember } from '../../redux/slice/userslice';
+import { logout } from '../../redux/slice/userslice';
 
 function Header(){
     const navigate = useNavigate();
+    
     let cartItems = useContext(MyContext);
- 
+    const user = useSelector(selectMember);
+    const dispatch = useDispatch();
     const [cartNo, setCartNo] = useState(0);
     
     useEffect(()=>{
         setCartNo(cartItems.cart.length)
     },[cartItems.cart])
+
+    useEffect(() => {
+        return () => console.log(user.isLogin);
+    },[]);
+    const updateLogout = ()=>{
+        dispatch(logout());
+    }
 
     return(
         <header className={styles.container}>
@@ -22,8 +33,9 @@ function Header(){
                 navigate('/')
             }}>Grocify.</p>
             <input type='text' className={styles.input} placeholder="Search here ..."></input>
-            <p>Login</p>
-            <p>Sign up</p>
+            {user.isLogin ? <p onClick={updateLogout}>Logout</p> : <p onClick={()=>{navigate('login')}}>Login</p>}
+            
+            {/* <p>Sign up</p> */}
             <p onClick={()=>{
                 navigate('/cart')
             }}>Cart(<span>{cartNo}</span>)</p>

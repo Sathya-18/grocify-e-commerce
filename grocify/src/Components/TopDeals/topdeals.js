@@ -64,7 +64,7 @@ function TopDeals(){
                 sortedArr.map((data,i)=>{
                     if(i<10){
                         return(
-                            <TopItems key={data.name} id={data.id} name={data.name} quantity={data.quantity} offer={data.offer} value={data.value} price={data.price}  item={data} image={data.url}></TopItems>
+                            <TopItems key={data.name} id={data.id} name={data.name} quantity={data.quantity} offer={data.offer} value={data.value} link={data.link} price={data.price}  item={data} image={data.url}></TopItems>
                         )
                     }
                    

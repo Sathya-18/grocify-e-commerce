@@ -7,6 +7,7 @@ import Cart from "./Components/cart/cart";
 import MyContext from "./context";
 import { useState } from "react";
 import GroceryDetails from "./Components/Catogories/grocery/groceryDetails";
+import Login from "./Components/login/login";
 
 function App() {
 
@@ -53,6 +54,7 @@ setCart((prev)=>{
           <Route path="/:lists" element={<Grocery></Grocery>}></Route>
           <Route path="/:detail/:id" element={<GroceryDetails/>}></Route>
           <Route path="cart" element={<Cart></Cart>}></Route>
+          <Route path='login' element={<Login></Login>}></Route>
         </Routes>
         <Footer></Footer>
       </MyContext.Provider>

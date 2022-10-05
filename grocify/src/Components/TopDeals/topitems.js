@@ -15,11 +15,12 @@ function TopItems(props){
     const offerPrice = props.price - offer;
     const navigate = useNavigate();
     
+    
 
     return( 
         <div className={styles.item} >
             <div className={styles.div} onClick={()=>{
-            navigate(`./${props.id}`)
+            navigate(`/${props.link}/${props.id}`)
         }}>
             <img src={props.image} alt='Products'></img>
             </div>
