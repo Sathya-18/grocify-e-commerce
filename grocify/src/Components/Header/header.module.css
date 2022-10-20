@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 .container{
     width: 100%;
     height: 90px;
-    background-color: teal;
+    background-color: #f44035;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,10 +20,46 @@
     color: white;
     cursor: pointer;
 }
+.header h1{
+   font-family: 'Neucha', sans-serif;
+   letter-spacing: 2px;
+}
+.search{
+    position: relative;
+    display: flex;
+}
 .input{
     width: 400px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 20px 0px 0px 20px;
     border: none;
     padding-left: 10px;
+    border-right: none;
+    outline: none;
+}
+.searchbtn{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0px 20px 20px 0px;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: rgb(88, 87, 87);
+    transition: 0ms;
+}
+.searchbtn:hover{
+    color: #f44035;
+    transition: 0ms;
+}
+.searchbtn:active{
+    color: black;
+}
+.container p{
+    font-weight: 600;
+}
+.container p:hover{
+    transform: scale(1.1);
 }

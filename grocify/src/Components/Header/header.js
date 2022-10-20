@@ -18,9 +18,10 @@ function Header(){
         setCartNo(cartItems.cart.length)
     },[cartItems.cart])
 
-    useEffect(() => {
-        return () => console.log(user.isLogin);
-    },[]);
+    // useEffect(() => {
+    //     return () => console.log(user.isLogin);
+    // },[]);
+    
     const updateLogout = ()=>{
         dispatch(logout());
     }
@@ -28,17 +29,26 @@ function Header(){
     return(
         <header className={styles.container}>
             <div className={styles.header}>
-            {/* <img></img> */}
-            <p onClick={()=>{
+            <h1 onClick={()=>{
                 navigate('/')
-            }}>Grocify.</p>
-            <input type='text' className={styles.input} placeholder="Search here ..."></input>
-            {user.isLogin ? <p onClick={updateLogout}>Logout</p> : <p onClick={()=>{navigate('login')}}>Login</p>}
+            }}>Grocify</h1>
+
+            <div className={styles.search}>
+            <input type='text' className={styles.input} placeholder="Search products here ..."></input>
+            <button className={styles.searchbtn}><i className='fa fa-search'></i></button>
+            </div>
+            
+            {user.isLogin ? <p onClick={updateLogout}><i className='fa fa-sign-out'></i> Logout</p> : <p onClick={()=>{navigate('login')}}><i className='fa fa-sign-in'></i> Login</p>}
             
             {/* <p>Sign up</p> */}
             <p onClick={()=>{
-                navigate('/cart')
-            }}>Cart(<span>{cartNo}</span>)</p>
+                if(user.isLogin === false){
+                    alert("Please Login to see the cart items")
+                }else{
+                    navigate('/cart')
+                }
+                
+            }}><i className='fa fa-shopping-cart'></i> Cart(<span>{cartNo}</span>)</p>
             </div>
         </header>
     )

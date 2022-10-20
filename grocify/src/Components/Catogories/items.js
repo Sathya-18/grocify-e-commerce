@@ -9,8 +9,8 @@ function Items(props){
     }
 
     return(
-        <div className={stylesG.container} onClick={handleClick}>
-            <div className={stylesG.image}>
+        <div className={stylesG.container} >
+            <div className={stylesG.image} onClick={handleClick}>
             <img src={props.image} alt="catogories"></img>
             </div>
             <h2>{props.name}</h2>

@@ -1,11 +1,13 @@
-// import Banner from "../Banner/banner";
+import Banner from "../Banner/banner";
 import Catogories from "../Catogories/catogories";
 import TopDeals from "../TopDeals/topdeals";
+
 
 function Home() {
     return (
         <div>
-            {/* <Banner></Banner> */}
+            <Banner></Banner>
+          
             <Catogories></Catogories>
             <TopDeals></TopDeals>
         </div>

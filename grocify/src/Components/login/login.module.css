@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80);
+    /* background-image: url(https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80); */
+    background-image: url(../../assets/1.jpg);
     /* background-position: center; */
     background-size: cover;
     /* background-attachment: fixed; */
@@ -40,7 +41,7 @@
 .login a{
     text-decoration: none;
     font-weight: bold;
-    color: #E65C4F;
+    color:#f44035;
 }
 .login a:hover{
     color: #e27970;
@@ -61,19 +62,21 @@
 }
 .submit2{
     height: 36px;
-    width: 200px;
+    width: 210px;
     text-align: center;
     font-size: 16px;
+    margin-top: 12px;
+    border-radius: 8px;
 }
 .submit1{
-    width: 200px;
+    width: 210px;
     height: 36px;
     font-size: 16px;
     background-color: #E65C4F;
     border: none;
     border-radius: 8px;
     color: white;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 .submit1:hover{
     filter: brightness(90%);

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css';
-import { selectMember } from '../../redux/slice/userslice';
+// import { selectMember } from '../../redux/slice/userslice';
 import { login } from '../../redux/slice/userslice';
 
 
@@ -12,7 +12,7 @@ function Login() {
     const [password, setPassword] = useState("");
     const [isValid, setValid] = useState(false);
     const dispatch = useDispatch();
-    const user = useSelector(selectMember);
+    // const user = useSelector(selectMember);
 
     // const [user, getUser] = useState([]);
 
@@ -56,7 +56,7 @@ function Login() {
                 <input type="password" placeholder="Enter password" onChange={passwordHandler} value={password} /><br></br>
                 {isValid ? <button type="submit" className={styles.submit1} >Submit</button> : <button type="submit" className={styles.submit2} disabled>Submit</button>}
                 <br></br>
-                <p className={styles.text}>Don't have an account? <span><Link to='/signup'>Sign up</Link></span></p>
+                {/* <p className={styles.text}>Don't have an account? <span><Link to='/signup'>Sign up</Link></span></p> */}
             </form>
 
         </div>
