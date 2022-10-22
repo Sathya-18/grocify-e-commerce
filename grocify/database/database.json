@@ -1,6 +1,8 @@
 {
   "cart": [],
-  "topdeals": [],
+  "topdeals": [
+   
+  ],
   "grocery": [
     {
       "name": "Wheat floor",
@@ -132,7 +134,7 @@
       "price": 100,
       "link": "fruits",
       "url": "https://5.imimg.com/data5/LM/DU/MY-22954806/apple-fruit-500x500.jpg",
-      "id": "1"
+      "id": 1
     },
     {
       "name": "Pineapple",
@@ -142,7 +144,7 @@
       "price": 150,
       "link": "fruits",
       "url": "https://static.libertyprim.com/files/familles/ananas-large.jpg?1569271716",
-      "id": "2"
+      "id": 2
     },
     {
       "name": "Strawberry",
@@ -152,7 +154,7 @@
       "price": 500,
       "link": "fruits",
       "url": "https://thumbs.dreamstime.com/b/three-strawberries-strawberry-leaf-white-background-114284301.jpg",
-      "id": "3"
+      "id": 3
     },
     {
       "name": "Grapes",
@@ -162,7 +164,7 @@
       "price": 200,
       "link": "fruits",
       "url": "https://cf.ltkcdn.net/wine/images/std/165373-800x532r1-grapes.jpg",
-      "id": "4"
+      "id": 4
     },
     {
       "name": "Orange",
@@ -172,7 +174,7 @@
       "price": 300,
       "link": "fruits",
       "url": "https://marketbasketfoods.com/wp-content/uploads/2014/02/oranges-01.jpg",
-      "id": "5"
+      "id": 5
     },
     {
       "name": "Banana",
@@ -182,7 +184,7 @@
       "price": 500,
       "link": "fruits",
       "url": "https://static.libertyprim.com/files/familles/banane-large.jpg?1569271725",
-      "id": "6"
+      "id": 6
     }
   ],
   "vegetables": [
@@ -194,7 +196,7 @@
       "price": 100,
       "link": "vegetables",
       "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",
-      "id": "1"
+      "id": 1
     },
     {
       "name": "Potato",
@@ -204,7 +206,7 @@
       "quantity": 1,
       "link": "vegetables",
       "url": "https://img.freepik.com/premium-photo/raw-potato-isolated-white-background-with-clipping-path_88281-1368.jpg?w=2000",
-      "id": "2"
+      "id": 2
     },
     {
       "name": "Onion",
@@ -214,7 +216,7 @@
       "quantity": 1,
       "link": "vegetables",
       "url": "https://media.istockphoto.com/photos/red-onions-picture-id499146498?k=20&m=499146498&s=612x612&w=0&h=fe8fftS2SpmSlx_KAT_wOPIhlwO9SFelIwq0nmG8NmA=",
-      "id": "3"
+      "id": 3
     },
     {
       "name": "Carrot",
@@ -224,7 +226,7 @@
       "price": 200,
       "link": "vegetables",
       "url": "https://www.hi5mart.com/image/cache/catalog/Vegetables/Carrot-750x750.jpg",
-      "id": "4"
+      "id": 4
     },
     {
       "name": "Capsicum",
@@ -233,7 +235,7 @@
       "value": "1 kg",
       "link": "vegetables",
       "url": "https://4.imimg.com/data4/VN/UL/MY-937476/capsicum-500x500.jpg",
-      "id": "5"
+      "id": 5
     },
     {
       "name": "Beans",
@@ -243,7 +245,7 @@
       "quantity": 1,
       "link": "vegetables",
       "url": "https://4.imimg.com/data4/TI/MC/MY-27758951/beans-500x500.jpg",
-      "id": "6"
+      "id": 6
     }
   ],
   "snacks": [
@@ -255,7 +257,7 @@
       "price": 30,
       "link": "snacks",
       "url": "https://m.media-amazon.com/images/I/510bkv+AKCL._SL1253_.jpg",
-      "id": "1"
+      "id": 1
     },
     {
       "name": "Kurkure",
@@ -265,7 +267,7 @@
       "price": 20,
       "link": "snacks",
       "url": "https://www.jiomart.com/images/product/original/490000329/kurkure-masala-munch-50-g-product-images-o490000329-p490000329-0-202203150744.jpg",
-      "id": "2"
+      "id": 2
     },
     {
       "name": "Dark fantasy",
@@ -275,7 +277,7 @@
       "price": 60,
       "link": "snacks",
       "url": "https://5.imimg.com/data5/WO/KU/GLADMIN-42063961/sunfeast-dark-fantasy-choco-fills-75gm-500x500.png",
-      "id": "3"
+      "id": 3
     },
     {
       "name": "Good day cookies",
@@ -285,7 +287,7 @@
       "price": 40,
       "link": "snacks",
       "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-JscbNlAW0TCkd3FtxGvDKyciBqbb-LRJnQ&usqp=CAU",
-      "id": "4"
+      "id": 4
     },
     {
       "name": "Kitkat",
@@ -295,7 +297,7 @@
       "price": 150,
       "link": "snacks",
       "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFkznqf9sdR2x7S0LZ8ieibcuARSN5DDnWA&usqp=CAU",
-      "id": "5"
+      "id": 5
     },
     {
       "name": "Munch ",
@@ -305,7 +307,7 @@
       "price": 300,
       "link": "snacks",
       "url": "https://shreemsweetsandbakery.com/wp-content/uploads/2021/03/Nestle-Munch-Box-600x600.jpg",
-      "id": "6"
+      "id": 6
     }
   ]
 }

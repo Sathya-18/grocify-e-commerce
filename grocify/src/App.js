@@ -13,6 +13,13 @@ function App() {
 
   const [cart, setCart] = useState([]);
   const [cartBtn, setBtn] = useState(true);
+  const [search, setsearch] = useState([])
+
+  const addSearch = (arr)=>{
+    setsearch ((prev)=>{
+      return [prev, ...arr]
+    })
+  }
 
   const btnChange = () => {
     setBtn(false)
@@ -42,8 +49,6 @@ function App() {
       alert("already in cart")
     }
 
-
-
   }
 
   const remove = (name) => {
@@ -68,11 +73,10 @@ function App() {
 
 
 
-
   return (
 
     <div>
-      <MyContext.Provider value={{ cart, addItems, remove, btnChange, cartBtn }}>
+      <MyContext.Provider value={{ cart, addItems, remove, btnChange, cartBtn, search, addSearch, setsearch }}>
         <Header></Header>
         <Routes>
           <Route index element={<Home></Home>}></Route>

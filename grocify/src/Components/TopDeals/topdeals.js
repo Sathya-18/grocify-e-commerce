@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styleTd from './td.module.css';
 import TopItems from './topitems';
+import MyContext from '../../context';
 
 function TopDeals(){
     const [gro, setGro] = useState([]);
@@ -8,13 +9,45 @@ function TopDeals(){
     const [fru, setFru] = useState([]);
     const [sna, setSna] = useState([]);
 
-    const [topDeals, setTop] = useState([]);
+    // const [topDeals, setTop] = useState([]);
+    const add = useContext(MyContext);
+    
+    
+
+
+    // sending an array instance to json server
+
+    // const addItems = async(ar)=>{
+    //     await Promise.all(
+    //         ar.map((item)=>{
+    //             fetch('http://localhost:3000/topdeals',{
+    //                         method: 'POST',
+    //                         headers: {
+    //                             'Accept': 'application/json,text/plain,*/*',
+    //                             'Content-Type': 'application/json',
+    //                             'Accept-Charset': 'utf-8'
+    //                         },
+    //                         body: JSON.stringify(item)
+    //                     })
+    //                 })
+    //     )
+    // }
+
+    // addItems(topDeals)
 
     function srt(a,b){
         return b.offer-a.offer
     }
 
-    const sortedArr = topDeals.sort(srt)
+    const sortedArr = add.search.sort(srt)
+
+
+
+    useEffect(()=>{
+        add.setsearch(()=>{
+            return [...gro, ...veg, ...fru, ...sna]
+        });
+    }, [gro, veg, fru, sna])
 
 
     useEffect(
@@ -50,11 +83,14 @@ function TopDeals(){
         }
     ,[])
 
-    useEffect(()=>{
-        setTop(()=>{
-            return [...gro,...veg,...fru,...sna ]
-        })
-    },[veg,gro,fru,sna])
+    // useEffect(()=>{
+    //     setTop(()=>{
+    //         return [...gro,...veg,...fru,...sna]
+    //     })
+    // },[veg,gro,fru,sna])
+
+    
+
 
     return(
         <div className={styleTd.container}>

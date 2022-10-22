@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMember } from '../../redux/slice/userslice';
 import { logout } from '../../redux/slice/userslice';
+import SearchBar from './searchbar';
 
 function Header(){
     const navigate = useNavigate();
@@ -33,10 +34,12 @@ function Header(){
                 navigate('/')
             }}>Grocify</h1>
 
-            <div className={styles.search}>
+            {/* <div className={styles.search}>
             <input type='text' className={styles.input} placeholder="Search products here ..."></input>
             <button className={styles.searchbtn}><i className='fa fa-search'></i></button>
-            </div>
+            </div> */}
+
+            <SearchBar></SearchBar>
             
             {user.isLogin ? <p onClick={updateLogout}><i className='fa fa-sign-out'></i> Logout</p> : <p onClick={()=>{navigate('login')}}><i className='fa fa-sign-in'></i> Login</p>}
             
